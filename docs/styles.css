@@ -399,7 +399,7 @@ footer a {
 		align-items: center;
 	}
 
-	#hero-box img, #hero-text, .ingredients-right, .ingredients-left, .more-left, .more-right, .news-img, .news-right {
+	#hero-box img, #hero-text, #product, .ingredients-row, .ingredients-right, .ingredients-left, .more-left, .more-right, .news-img, .news-right {
 		width: 100%;
 	
 	}
@@ -408,26 +408,37 @@ footer a {
 		margin: 20px 0;
 	}
 
-	#hero-text, h2 {
+	#hero-text {
 		font-size: 20px;
+    }
+    
+    h2 {
+        font-size: 20px;
+        padding: 0 20px 50px 20px;
 	}
 	
- 	#product .video iframe, .ingredients-right, .features-left, .subscribe {
+ 	.video iframe, .ingredients-right, .features-left, .subscribe {
 		width: 320px;
 		height: auto;
 	}
 
-	.ingredients-right, .ingredients-right, .more-left {
-		margin: 20px;
+	.ingredients-right, .ingredients-left, .more-left {
+		margin: 20px 0;
 		padding: 0 20px;
 	}
 
 	
-	.img-gallery, .news-img img {
+	.img-gallery {
 		flex-wrap: wrap;
-		padding: 0 20px;
+        padding: 0;
+        margin: 0 10px;
 	}
 
+    .news-img img {
+        padding: 0;
+    }
 
-
+    .news-right {
+        padding: 0;
+    }
 }	
