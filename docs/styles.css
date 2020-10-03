@@ -33,7 +33,7 @@ body {
 	padding: 20px;
 	color: #704104;
 	font-weight: bold;
-	font-size: 22px;
+	font-size: 21px;
 }
 
 .topbar a:hover, .hamburger i:hover {
@@ -327,7 +327,8 @@ form {
 	margin: 10px 5px;
 }
 
-#email { 
+
+input[type=email] { 
 	background-color: #0854a0;
 	color: #fff;
 	border-radius: 5px;
@@ -338,7 +339,11 @@ form {
 	outline: none;
 }
 
-#submit {
+::placeholder {
+	color: #fff;
+}
+
+input[type=submit] {
 	margin: 10px 0 10px 10px;
 	border: none;
 	padding: 10px;
@@ -349,7 +354,7 @@ form {
 }
 
 
-#submit:hover {
+input[type=submit]:hover {
 	background-color: #0854a0;
 }
 
@@ -374,6 +379,7 @@ footer a {
 	
 	#top {
 		flex-direction: column;
+		padding-bottom: 5px;
 	}
 
 	.hamburger i {
@@ -390,7 +396,12 @@ footer a {
 
 	.topbar.responsive a {
 		display: block;
-		padding: 15px 0;
+		padding: 20px 0;
+	}
+
+	.topbar.responsive a:hover, .hamburger i:hover {
+		background-color: #fff;
+		color: #704104;
 	}
 
 	#hero-box, .ingredients-row, .order-row, .features-row, .more-row, .news-row, .news-right {
@@ -440,5 +451,10 @@ footer a {
 
     .news-right {
         padding: 0;
-    }
+	}
+	
+	input[type=submit] {
+		margin: 10px 0 10px 10px;
+		padding: 10px;
+	}	
 }	
