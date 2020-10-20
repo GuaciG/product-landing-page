@@ -38,6 +38,6 @@ This project was built as a challenge on freecodecamp course. It was part of Res
 - [x] **User Story #15:** My product landing page should utilize CSS flexbox at least once.
 
 
-Feedback issues etc. are more than welcome!
+Feedback issues etc. are more than welcome! Thanks!
 
 
