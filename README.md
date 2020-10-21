@@ -38,6 +38,12 @@ This project was built as a challenge on freecodecamp course. It was part of Res
 - [x] **User Story #15:** My product landing page should utilize CSS flexbox at least once.
 
 
+
+
+You can take a look at this project in [github](https://guacig.github.io/product-landing-page/)
+
+Also you can find the working demo in [codepen](https://codepen.io/GuaciG/full/jOrMRbw)
+
 Feedback issues etc. are more than welcome! Thanks!
 
 
