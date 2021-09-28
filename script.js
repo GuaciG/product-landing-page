@@ -1,10 +1,14 @@
+const menuList = document.getElementById("menu");
+const hamburgerBtn = document.getElementById("hamburger");
 
-function myFunction() {
-    var x = document.getElementById("navigation");
-        if (x.className === "topbar") {
-            x.className += " responsive";
-        } 
-        else {
-            x.className = "topbar";
-        }
-}
+document.onclick = function (e) {
+  if (e.target.id !== "menu" && e.target.id !== "hamburger") {
+    hamburgerBtn.classList.remove("active");
+    menuList.classList.remove("active");
+  }
+};
+
+hamburgerBtn.onclick = function () {
+  hamburgerBtn.classList.toggle("active");
+  menuList.classList.toggle("active");
+};

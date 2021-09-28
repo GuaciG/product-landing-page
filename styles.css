@@ -19,7 +19,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 900;
+  z-index: 999;
 }
 
 .nav-bar {
@@ -36,22 +36,32 @@ body {
   padding: 3px;
 }
 
-.topbar a,
-.hamburger i {
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+#menu li {
+  list-style: none;
+}
+
+#menu a {
   text-decoration: none;
   padding: 20px;
   color: #704104;
   font-weight: bold;
   font-size: 21px;
+  display: block;
 }
 
-.topbar a:hover,
-.hamburger i:hover {
-  background-color: #704104;
+#menu a:hover {
+  background-color: hsl(34, 93%, 23%);
   color: #fff;
 }
 
-.hamburger i {
+#hamburger {
   display: none;
 }
 
@@ -96,7 +106,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 0;
+  padding: 60px 0 0 0;
   background-color: #0854a0;
   width: 100%;
 }
@@ -105,7 +115,7 @@ h2 {
   font-size: 28px;
   color: #f2f2f2;
   padding-bottom: 50px;
-  margin: 10px 0 0 0;
+  margin: 30px 0 0 0;
   text-shadow: 2px 2px 10px #3a3939;
 }
 
@@ -113,6 +123,8 @@ iframe {
   border: 3px solid #4e7ee6;
   box-shadow: 0px 0px 30px #02203f;
   margin-bottom: 120px;
+  width: 600px;
+  height: 400px;
 }
 
 .ingredients-row {
@@ -313,7 +325,6 @@ iframe {
   background-color: #0854a0;
   align-items: center;
   padding: 60px 0 0 0;
-  margin-bottom: 60px;
   width: 100%;
 }
 
@@ -348,7 +359,7 @@ iframe {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  padding: 0 0 80px 0;
+  padding: 60px 0 80px 0;
   width: 100%;
   text-align: center;
 }
@@ -448,9 +459,13 @@ footer a:hover {
 
 /*  media queries for tablets devices screen 768px  */
 
-@media only screen and (max-width: 790px) {
+@media (max-width: 790px) {
   .nav-bar {
     width: 90%;
+  }
+
+  #menu {
+    width: 55%;
   }
 
   /*  style hero image */
@@ -496,10 +511,6 @@ footer a:hover {
 
   /*  style order section  */
 
-  #order {
-    padding: 0;
-  }
-
   .order-box {
     width: 200px;
     margin: 15px;
@@ -534,7 +545,7 @@ footer a:hover {
   /*  style newsletter section  */
 
   #contact {
-    padding: 0 40px 80px 40px;
+    padding: 60px 40px 80px 40px;
   }
 
   .news-row img {
@@ -558,31 +569,72 @@ footer a:hover {
 
 /* media queries for mobile devices screen 375px */
 
-@media only screen and (max-width: 500px) {
+@media (max-width: 500px) {
   .nav-bar {
     flex-direction: column;
+    width: 100%;
   }
 
-  .top {
-    flex-direction: column;
-    padding-bottom: 5px;
+  #hamburger {
+    background-color: #704104;
+    display: inline-block;
+    height: 3px;
+    width: 30px;
+    position: fixed;
+    right: 20px;
+    top: 30px;
+    cursor: pointer;
   }
 
-  .hamburger i {
-    display: block;
+  #hamburger::before {
+    content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    text-decoration: none;
+    width: 30px;
+    height: 3px;
+    background-color: #704104;
+    transform: translateY(-8px);
+    transition: 0.2s;
+    cursor: pointer;
   }
 
-  .topbar a {
+  #hamburger::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #704104;
+    transform: translateY(8px);
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  #hamburger.active {
+    background-color: transparent;
+  }
+
+  #hamburger.active::before {
+    transform: translateY(0px) rotate(45deg);
+  }
+
+  #hamburger.active::after {
+    transform: translateY(0px) rotate(-45deg);
+  }
+
+  #menu.active {
+    display: flex;
+  }
+
+  #menu {
     display: none;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
   }
 
-  .topbar.responsive a {
-    display: block;
+  #menu a {
     padding: 20px 0;
+    width: 100%;
+    text-align: center;
   }
 
   /*  style hero image */
@@ -601,6 +653,7 @@ footer a:hover {
     text-align: center;
     width: 90%;
     padding: 30px 0;
+    margin-bottom: 50px;
   }
 
   /*  style product section  */
@@ -610,9 +663,10 @@ footer a:hover {
   }
 
   iframe {
-    max-width: 350px;
-    height: auto;
-    margin-bottom: 60px;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 90px;
+    border: none;
   }
 
   .ingredients {
@@ -632,6 +686,10 @@ footer a:hover {
   }
 
   /*  style order section  */
+
+  .order-row {
+    margin-bottom: 30px;
+  }
 
   .order-box {
     width: 270px;
@@ -671,7 +729,7 @@ footer a:hover {
   /*  style newsletter section  */
 
   #contact {
-    padding: 0 20px 80px 20px;
+    padding: 60px 20px 80px 20px;
   }
 
   .news-row {
