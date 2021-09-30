@@ -389,13 +389,18 @@ iframe {
 .img-gallery img {
   width: 80px;
   height: 80px;
-  margin: 20px 5px;
+  margin: 20px 5px 10px 5px;
   transition: all 0.3s ease-out;
   cursor: pointer;
 }
 
 .img-gallery img:hover {
   transform: scale(1.3);
+}
+
+.larger-pic {
+  margin: 0 5px 10px 5px;
+  font-size: 12px;
 }
 
 .modal {
@@ -450,7 +455,7 @@ iframe {
 }
 
 .subscribe {
-  margin: 10px 5px;
+  margin: 20px 5px 10px 5px;
 }
 
 form {
@@ -623,6 +628,17 @@ footer a:hover {
   .full-img {
     height: auto;
     width: 100%;
+  }
+
+  .modal p {
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+  }
+
+  .close-btn {
+    top: 23%;
+    right: 15%;
   }
 
   .subscribe p {
@@ -816,5 +832,21 @@ footer a:hover {
   .img-gallery img {
     width: 80px;
     height: 80px;
+  }
+
+  .larger-pic {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal p {
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+  }
+
+  .close-btn {
+    top: 15%;
+    right: 5%;
   }
 }
