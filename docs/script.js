@@ -1,33 +1,35 @@
+//menu responsive functionalily
 const menuList = document.getElementById("menu");
 const hamburgerBtn = document.getElementById("hamburger");
 
 document.onclick = function (e) {
+  //close menuList and hamburger come back to normal status
   if (e.target.id !== "menu" && e.target.id !== "hamburger") {
     hamburgerBtn.classList.remove("active");
     menuList.classList.remove("active");
   }
 };
 
+//when clicking hamburger button, you open menuList and hamburger get crossed
 hamburgerBtn.onclick = function () {
   hamburgerBtn.classList.toggle("active");
   menuList.classList.toggle("active");
 };
 
-//Modal popup for images
-
 const modal = document.querySelector(".modal");
 const previews = document.querySelectorAll(".img-gallery img");
-const original = document.querySelector(".full-img");
+const fullImage = document.querySelector(".full-img");
 const caption = document.querySelector(".caption");
 const closeBtn = document.querySelector(".close-btn");
 
 previews.forEach((preview) => {
   preview.addEventListener("click", () => {
     modal.classList.add("open");
-    original.classList.add("open");
-    //change text and image
-    const originalSrc = preview.getAttribute("data-original");
-    original.src = originalSrc;
+    fullImage.classList.add("open");
+    //change image
+    const originalSrc = preview.getAttribute("src");
+    fullImage.src = originalSrc;
+    //change text
     const altText = preview.alt;
     caption.textContent = altText;
   });

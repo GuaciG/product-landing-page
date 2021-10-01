@@ -1,3 +1,11 @@
+/* declaration */
+:root {
+  --main-color: #fff;
+  --secondary-color: #0854a0;
+  --choco-color: #704104;
+  --background-boxes: #fff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +13,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--main-color);
   font-family: "Grandstander", cursive;
 }
 
@@ -14,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--main-color);
   box-shadow: 5px 5px 5px rgba(77, 77, 77, 0.2);
   position: fixed;
   top: 0;
@@ -50,15 +58,15 @@ body {
 #menu a {
   text-decoration: none;
   padding: 20px;
-  color: #704104;
+  color: var(--choco-color);
   font-weight: bold;
   font-size: 21px;
   display: block;
 }
 
 #menu a:hover {
-  background-color: hsl(34, 93%, 23%);
-  color: #fff;
+  background-color: var(--choco-color);
+  color: var(--main-color);
 }
 
 #hamburger {
@@ -95,7 +103,7 @@ main {
   width: 35%;
   padding: 0 0 0 35px;
   margin: 0 25px;
-  color: #704104;
+  color: var(--choco-color);
   text-shadow: 2px 2px 8px #b4b2b2;
 }
 
@@ -107,7 +115,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 60px 0 0 0;
-  background-color: #0854a0;
+  background-color: var(--secondary-color);
   width: 100%;
 }
 
@@ -127,20 +135,20 @@ iframe {
   height: 400px;
 }
 
-.ingredients-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  padding: 80px 0;
-  width: 100%;
-}
-
 .ingredients {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1350px;
+}
+
+.ingredients-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  padding: 80px 0;
+  width: 100%;
 }
 
 .ingredients img {
@@ -157,7 +165,7 @@ iframe {
   margin: 0 0 0 90px;
   background-color: rgba(83, 152, 241, 0.4);
   box-shadow: 0px 0px 10px rgba(37, 37, 37, 0.4);
-  border: 1px solid #0854a0;
+  border: 1px solid var(--secondary-color);
   padding: 30px 40px;
   border-radius: 15px;
   text-align: left;
@@ -188,7 +196,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: #0854a0;
+  background-color: var(--secondary-color);
   padding: 60px 0;
   align-items: center;
   width: 100%;
@@ -208,7 +216,7 @@ iframe {
   justify-content: center;
   text-align: center;
   width: 320px;
-  background-color: #fff;
+  background-color: var(--background-boxes);
   border: 1px solid #f5f5f5;
   box-shadow: 0px 0px 30px #02203f;
   border-radius: 10px;
@@ -239,16 +247,16 @@ iframe {
   border: none;
   border-radius: 6px;
   padding: 5px 30px;
-  background-color: #704104;
+  background-color: var(--choco-color);
   color: #fff;
   font-weight: bold;
   font-size: 16px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .order-text button:hover {
-  background-color: #0854a0;
-  color: #fff;
+  background-color: var(--secondary-color);
 }
 
 /*  style features section  */
@@ -258,7 +266,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: #fff;
+  background-color: var(--main-color);
   padding: 60px 0;
   align-items: center;
   width: 100%;
@@ -284,7 +292,7 @@ iframe {
   text-align: center;
   background-color: rgba(83, 152, 241, 0.4);
   box-shadow: 0px 0px 10px rgba(37, 37, 37, 0.4);
-  border: 1px solid #0854a0;
+  border: 1px solid var(--secondary-color);
   border-radius: 15px;
   z-index: 10;
 }
@@ -295,10 +303,10 @@ iframe {
   align-items: center;
   padding: 15px;
   margin: 20px;
-  color: #0854a0;
-  border: 2px solid #0854a0;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: var(--background-boxes);
 }
 
 .feature-box i {
@@ -322,7 +330,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: #0854a0;
+  background-color: var(--secondary-color);
   align-items: center;
   padding: 60px 0 0 0;
   width: 100%;
@@ -358,7 +366,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--main-color);
   padding: 60px 0 80px 0;
   width: 100%;
   text-align: center;
@@ -436,7 +444,7 @@ iframe {
 }
 
 .modal p {
-  color: #fff;
+  color: var(--main-color);
   font-size: 20px;
   position: absolute;
   bottom: 8%;
@@ -445,7 +453,7 @@ iframe {
 }
 
 .close-btn {
-  color: #fff;
+  color: var(--main-color);
   font-size: 60px;
   position: absolute;
   top: 5%;
@@ -464,8 +472,7 @@ form {
 }
 
 input[type="email"] {
-  background-color: #0854a0;
-  color: #fff;
+  background-color: var(--secondary-color);
   border-radius: 5px;
   margin: 10px 0;
   padding: 10px;
@@ -483,19 +490,25 @@ input[type="submit"] {
   border: none;
   padding: 10px;
   border-radius: 5px;
-  background-color: #704104;
+  background-color: var(--choco-color);
   color: #fff;
   font-weight: bold;
+  cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background-color: #0854a0;
+  background-color: var(--secondary-color);
 }
 
 .social i {
   font-size: 30px;
   color: rgba(8, 84, 160, 0.8);
   margin: 10px 5px;
+  cursor: pointer;
+}
+
+.social i:hover {
+  color: rgba(112, 65, 4, 0.8);
 }
 
 /*  style footer  */
@@ -504,8 +517,8 @@ footer {
   position: relative;
   top: 68px;
   text-align: center;
-  background-color: #0854a0;
-  color: #fff;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
   padding: 20px 0;
   text-shadow: 2px 2px 10px #3a3939;
   font-size: 12px;
@@ -513,11 +526,11 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: #fff;
+  color: var(--main-color);
 }
 
 footer a:hover {
-  color: #704104;
+  color: var(--choco-color);
 }
 
 /*  media queries for tablets devices screen 768px  */
@@ -655,7 +668,7 @@ footer a:hover {
   }
 
   #hamburger {
-    background-color: #704104;
+    background-color: var(--choco-color);
     display: inline-block;
     height: 3px;
     width: 30px;
@@ -670,7 +683,7 @@ footer a:hover {
     position: absolute;
     width: 30px;
     height: 3px;
-    background-color: #704104;
+    background-color: var(--choco-color);
     transform: translateY(-8px);
     transition: 0.2s;
     cursor: pointer;
@@ -681,7 +694,7 @@ footer a:hover {
     position: absolute;
     width: 30px;
     height: 3px;
-    background-color: #704104;
+    background-color: var(--choco-color);
     transform: translateY(8px);
     transition: 0.2s;
     cursor: pointer;
